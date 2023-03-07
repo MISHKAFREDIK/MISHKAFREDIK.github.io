@@ -1,0 +1,184 @@
+body{
+    background-color: #111111;
+    /* background-color: #000000; */
+    /* filter: invert(100) hue-rotate(180deg) */
+}
+.cards{
+    max-width: 1050px;
+    margin: 50px auto;
+    /* text-align: center; */
+
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+button{
+    width: 100%;
+    max-width: 200px;
+    min-height: 50px;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #052393;
+}
+button:hover{
+    background-color: #0b3dfa;
+}
+.card {
+    width: 100px;
+    height: 150px;
+    border: 1px solid white;
+    /* border: 1px solid black; */
+    
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.card.selected {
+    border: 2px solid blue;
+        opacity: 0.5;
+
+}
+
+.card.opponent {
+    border: 2px solid red;
+}
+/* .card.mycard {
+    border: 1px solid white;
+} */
+
+.card.discarded {
+    background-size: cover;
+    border: none;
+}
+/* /////////////////////////////////////////////////////////////// */
+#che6{
+    background-image: url("/img/che6.png");
+    /* -webkit-filter: invert(100) hue-rotate(180deg);
+    filter: invert(100) hue-rotate(180deg); */
+}
+#che7{
+    background-image: url("/img/che7.png");
+    /* filter: invert(100) hue-rotate(180deg); */
+}
+#che8{
+    background-image: url("/img/che8.png");
+}
+#che9{
+    background-image: url("/img/che9.png");
+}
+#che10{
+    background-image: url("/img/che10.png");
+}
+#che11{
+    background-image: url("/img/che11.png");
+}
+#che12{
+    background-image: url("/img/che12.png");
+}
+#che13{
+    background-image: url("/img/che13.png");
+}
+#che14{
+    background-image: url("/img/che14.png");
+}
+/* /////////////////////////////////////////////////////////////// */
+#bub6{
+    background-image: url("/img/bub6.png");
+}
+#bub7{
+    background-image: url("/img/bub7.png");
+}
+#bub8{
+    background-image: url("/img/bub8.png");
+}
+#bub9{
+    background-image: url("/img/bub9.png");
+}
+#bub10{
+    background-image: url("/img/bub10.png");
+}
+
+#bub11{
+    background-image: url("/img/bub11.png");
+}
+#bub12{
+    background-image: url("/img/bub12.png");
+}
+#bub13{
+    background-image: url("/img/bub13.png");
+}
+#bub14{
+    background-image: url("/img/bub14.png");
+}
+/* /////////////////////////////////////////////////////////////// */
+
+#kre6{
+    background-image: url("/img/kre6.png");
+}
+#kre7{
+    background-image: url("/img/kre7.png");
+}
+#kre8{
+    background-image: url("/img/kre8.png");
+}
+#kre9{
+    background-image: url("/img/kre9.png");
+}
+#kre10{
+    background-image: url("/img/kre10.png");
+}
+#kre11{
+    background-image: url("/img/kre11.png");
+}
+#kre12{
+    background-image: url("/img/kre12.png");
+}
+#kre13{
+    background-image: url("/img/kre13.png");
+}
+#kre14{
+    background-image: url("/img/kre14.png");
+}
+/* /////////////////////////////////////////////////////////////// */
+
+#pik6{
+    background-image: url("/img/pik6.png");
+}
+#pik7{
+    background-image: url("/img/pik7.png");
+}
+#pik8{
+    background-image: url("/img/pik8.png");
+}
+#pik9{
+    background-image: url("/img/pik9.png");
+}
+#pik10{
+    background-image: url("/img/pik10.png");
+}
+#pik11{
+    background-image: url("/img/pik11.png");
+}
+#pik12{
+    background-image: url("/img/pik12.png");
+}
+#pik13{
+    background-image: url("/img/pik13.png");
+}
+#pik14{
+    background-image: url("/img/pik14.png");
+}
+/* /////////////////////////////////////////////////////////////// */
+
+
+
