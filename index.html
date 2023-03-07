@@ -53,7 +53,13 @@ const opponentButton = document.querySelector('#opponent');
 
 cards.forEach(card => {
   card.addEventListener('click', () => {
-    card.classList.toggle('selected');
+    if (!card.classList.contains('discarded')) {
+      if (card.classList.contains('selected')) {
+        card.classList.remove('selected');
+      } else {
+        card.classList.add('selected');
+      }
+    }
   });
 });
 
