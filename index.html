@@ -7,163 +7,41 @@
 	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier@1.0.1/dist/knn-classifier.min.js"></script>
 	<script src="cat_classifier.js"></script>
 	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #f5f5f5;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-			font-family: Arial, sans-serif;
-		}
-		h1 {
-			margin: 0;
-			font-size: 32px;
-			font-weight: bold;
-			text-align: center;
-			color: #333;
-		}
-		img {
-			max-width: 400px;
-			max-height: 400px;
-			margin: 20px 0;
-		}
-		button {
-			padding: 10px 20px;
-			font-size: 18px;
-			font-weight: bold;
-			color: #fff;
-			background-color: #333;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-			outline: none;
-			transition: background-color 0.2s;
-		}
-		button:hover {
-			background-color: #555;
-		}
-		p {
-			font-size: 24px;
-			font-weight: bold;
-			text-align: center;
-			color: #333;
-		}
+		
+		 
+		
+			
 	</style>
 </head>
 <body>
-	<h1>Котик чи не котик?</h1>
-	<img id="image" src="https://source.unsplash.com/400x400/?cat&sig=0" alt="Зображення" />
-	<button id="predictBtn">Визначити</button>
-	<p id="result"></p>
+	
+<div class="card"></div>
 
-	<script>
-		// Завантаження навчальних даних
-		async function loadTrainingData() {
-			const cats = [];
-			const dogs = [];
-			for (let i = 0; i < 100; i++) {
-				const cat = await loadImage(`https://source.unsplash.com/400x400/?cat&sig=${i}`);
-				const dog = await loadImage(`https://source.unsplash.com/400x400/?dog&sig=${i}`);
-				cats.push(cat);
-				dogs.push(dog);
-			}
-			return {
-				cats,
-				dogs
-			};
-		}
+<div class="card"></div>
 
-		// Визначення ознак зображення
-		async function getFeatures(img) {
-			const model = await mobilenet.load();
-			const tensor = tf.browser.fromPixels(img);
-			const resized = tf.image.resizeBilinear(tensor, [224, 224]);
-			const normalized = resized.div(255.0);
-			const batched = normalized.reshape([1, 224, 224, 3]);
-			const features = model.infer(batched);
-			tensor.dispose();
-			resized.dispose();
-			normalized.dispose();
-			batched.dispose();
-			return features;
-		}
+<div class="card"></div>
 
-		// Визначення класу зображення
-		async function predictImage({ classifier }, img) {
-			const features = await getFeatures(img);
-			const result = await classifier.predictClass(features);
-			return result.label;
-		}
+<button id="discard">Відбій</button>
 
-		// Завантаження зображення
-		function loadImage(url) {
-			return new Promise((resolve, reject) => {
-				const img = new Image();
-				img.crossOrigin = 'anonymous';
-				img.onload = () => resolve(img);
-				img.onerror = reject;
-				img.src = url;
-			});
-		}
+<button id="restart">Рестарт</button>
 
-		// Основна функція
-		async function main() {
-			const data = await loadTrainingData();
-			const model = knnClassifier.create();
-			data.cats.forEach(img => {
-				const features = getFeatures(img);
-				model.addExample(features, 'cat');
-			});
-			data.dogs.forEach(img => {
-				const features = getFeatures(img);
-				model.addExample(features, 'not cat');
-			});
-			const classifier = await model.train();
-			const predictBtn = document.getElementById('predictBtn');
-			const result = document.getElementById('result');
-			const img = document.getElementById('image');
-			predictBtn.addEventListener('click', async () => {
-				const prediction = await predictImage({ classifier }, img);
-				result.textContent = prediction === 'cat' ? 'Це котик!' : 'Це не котик';
-			});
-		}
+<button id="opponent">Карти супротивника</button>
 
-		main();
-	</script>
-	<style>
-		h1 {
-			text-align: center;
-			margin-top: 50px;
-		}
-		img {
-			display: block;
-			margin: 0 auto;
-			max-width: 400px;
-			max-height: 400px;
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
-		#predictBtn {
-			display: block;
-			margin: 0 auto;
-			margin-bottom: 20px;
-			font-size: 20px;
-			padding: 10px 20px;
-			background-color: #007aff;
-			color: white;
-			border: none;
-			border-radius: 10px;
-			cursor: pointer;
-		}
-		#result {
-			text-align: center;
-			font-size: 24px;
-			font-weight: bold;
-			margin-top: 20px;
-		}
-	</style>
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+		  
+
+		
+			
 </body>
 </html>
