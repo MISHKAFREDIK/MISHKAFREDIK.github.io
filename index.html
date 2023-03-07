@@ -84,7 +84,7 @@ const cards = document.querySelectorAll('.card');
 
 cards.forEach(card => {
   card.addEventListener('click', () => {
-    if (!card.classList.contains('discarded')) {
+    if (!card.classList.contains('opponent')) {
       if (card.classList.contains('selected')) {
         card.classList.remove('selected');
       } else {
