@@ -52,6 +52,18 @@ const opponentButton = document.querySelector('#opponent');
 
 cards.forEach(card => {
   card.addEventListener('click', () => {
+    if (!card.classList.contains('opponent')) {
+      if (card.classList.contains('selected')) {
+        card.classList.remove('selected');
+      } else {
+        card.classList.add('selected');
+      }
+    }
+  });
+});
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
     card.classList.toggle('selected');
   });
 });
@@ -80,19 +92,9 @@ opponentButton.addEventListener('click', () => {
   });
 });
 
-const cards = document.querySelectorAll('.card');
 
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    if (!card.classList.contains('opponent')) {
-      if (card.classList.contains('selected')) {
-        card.classList.remove('selected');
-      } else {
-        card.classList.add('selected');
-      }
-    }
-  });
-});
+
+
 
 
 </script>			
