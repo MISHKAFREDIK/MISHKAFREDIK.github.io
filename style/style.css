@@ -3,10 +3,11 @@ body {
     /* background-color: #000000; */
     /* filter: invert(100) hue-rotate(180deg) */
 }
+
 .cards {
-    max-width: 1050px;
+    max-width: 1100px;
     margin: 50px auto;
-    /* margin-bottom: 50px; */
+    margin-bottom: 50px;
 
     display: flex;
     flex-wrap: wrap;
@@ -74,182 +75,185 @@ button:hover {
 }
 
 /* /////////////////////////////////////////////////////////////// */
-#che6 {
+.che6 {
     background-image: url("/img/che6.png");
     /* -webkit-filter: invert(100) hue-rotate(180deg);
     filter: invert(100) hue-rotate(180deg); */
 }
 
-#che7 {
+.che7 {
     background-image: url("/img/che7.png");
     /* filter: invert(100) hue-rotate(180deg); */
 }
 
-#che8 {
+.che8 {
     background-image: url("/img/che8.png");
 }
 
-#che9 {
+.che9 {
     background-image: url("/img/che9.png");
 }
 
-#che10 {
+.che10 {
     background-image: url("/img/che10.png");
 }
 
-#che11 {
+.che11 {
     background-image: url("/img/che11.png");
 }
 
-#che12 {
+.che12 {
     background-image: url("/img/che12.png");
 }
 
-#che13 {
+.che13 {
     background-image: url("/img/che13.png");
 }
 
-#che14 {
+.che14 {
     background-image: url("/img/che14.png");
 }
 
 /* /////////////////////////////////////////////////////////////// */
-#bub6 {
+.bub6 {
     background-image: url("/img/bub6.png");
 }
 
-#bub7 {
+.bub7 {
     background-image: url("/img/bub7.png");
 }
 
-#bub8 {
+.bub8 {
     background-image: url("/img/bub8.png");
 }
 
-#bub9 {
+.bub9 {
     background-image: url("/img/bub9.png");
 }
 
-#bub10 {
+.bub10 {
     background-image: url("/img/bub10.png");
 }
 
-#bub11 {
+.bub11 {
     background-image: url("/img/bub11.png");
 }
 
-#bub12 {
+.bub12 {
     background-image: url("/img/bub12.png");
 }
 
-#bub13 {
+.bub13 {
     background-image: url("/img/bub13.png");
 }
 
-#bub14 {
+.bub14 {
     background-image: url("/img/bub14.png");
 }
 
 /* /////////////////////////////////////////////////////////////// */
 
-#kre6 {
+.kre6 {
     background-image: url("/img/kre6.png");
 }
 
-#kre7 {
+.kre7 {
     background-image: url("/img/kre7.png");
 }
 
-#kre8 {
+.kre8 {
     background-image: url("/img/kre8.png");
 }
 
-#kre9 {
+.kre9 {
     background-image: url("/img/kre9.png");
 }
 
-#kre10 {
+.kre10 {
     background-image: url("/img/kre10.png");
 }
 
-#kre11 {
+.kre11 {
     background-image: url("/img/kre11.png");
 }
 
-#kre12 {
+.kre12 {
     background-image: url("/img/kre12.png");
 }
 
-#kre13 {
+.kre13 {
     background-image: url("/img/kre13.png");
 }
 
-#kre14 {
+.kre14 {
     background-image: url("/img/kre14.png");
 }
 
 /* /////////////////////////////////////////////////////////////// */
 
-#pik6 {
+.pik6 {
     background-image: url("/img/pik6.png");
 }
 
-#pik7 {
+.pik7 {
     background-image: url("/img/pik7.png");
 }
 
-#pik8 {
+.pik8 {
     background-image: url("/img/pik8.png");
 }
 
-#pik9 {
+.pik9 {
     background-image: url("/img/pik9.png");
 }
 
-#pik10 {
+.pik10 {
     background-image: url("/img/pik10.png");
 }
 
-#pik11 {
+.pik11 {
     background-image: url("/img/pik11.png");
 }
 
-#pik12 {
+.pik12 {
     background-image: url("/img/pik12.png");
 }
 
-#pik13 {
+.pik13 {
     background-image: url("/img/pik13.png");
 }
 
-#pik14 {
+.pik14 {
     background-image: url("/img/pik14.png");
 }
 
 /* /////////////////////////////////////////////////////////////// */
 
 
-@media  (max-width: 600px) {
+
+@media only screen and (max-width: 600px) {
     .button {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
     }
-
     button {
-        width: 80%;
-        max-width: 300px;
-        margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
     }
-
     .cards {
-        max-width: 400px;
-        margin: 20px auto;
+    max-width: 400px;
+    margin: 20px auto;
+    justify-content: center;
     }
-
     .card {
-        width: 70px;
-        height: 105px;
-        margin-right: 5px;
+    width: 70px;
+    height: 105px;
+    margin-right: 5px;
     }
-}
+    }
