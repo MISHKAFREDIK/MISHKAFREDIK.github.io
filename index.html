@@ -22,6 +22,10 @@
 .card.opponent {
   border: 2px solid red;
 }
+.card.discarded {
+  background-color: black;
+}
+
 
 		
 			
@@ -57,6 +61,7 @@ discardButton.addEventListener('click', () => {
   selectedCards.forEach(card => {
     card.style.backgroundImage = 'url(path/to/new/image)';
     card.classList.remove('selected');
+    card.classList.add('discarded');
   });
 });
 
