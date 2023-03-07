@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Котик чи не котик?</title>
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0/dist/mobilenet.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier@1.0.1/dist/knn-classifier.min.js"></script>
-	<script src="cat_classifier.js"></script>
-	<style>
-		
-		 
+	<title>Дурак</title>
+        <style>	 
+.card {
+  width: 100px;
+  height: 150px;
+  border: 1px solid black;
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.card.selected {
+  border: 2px solid blue;
+}
+
+.card.opponent {
+  border: 2px solid red;
+}
+
 		
 			
 	</style>
@@ -25,23 +39,41 @@
 
 <button id="restart">Рестарт</button>
 
-<button id="opponent">Карти супротивника</button>
+<button id="opponent">Карти супротивника</button>		
+<script>
+const cards = document.querySelectorAll('.card');
+const discardButton = document.querySelector('#discard');
+const restartButton = document.querySelector('#restart');
+const opponentButton = document.querySelector('#opponent');
 
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('selected');
+  });
+});
 
-	
+discardButton.addEventListener('click', () => {
+  const selectedCards = document.querySelectorAll('.card.selected');
+  selectedCards.forEach(card => {
+    card.style.backgroundImage = 'url(path/to/new/image)';
+    card.classList.remove('selected');
+  });
+});
 
-	
+restartButton.addEventListener('click', () => {
+  cards.forEach(card => {
+    card.style.backgroundImage = 'url(path/to/initial/image)';
+    card.classList.remove('selected');
+  });
+});
 
-	
+opponentButton.addEventListener('click', () => {
+  const selectedCards = document.querySelectorAll('.card.selected');
+  selectedCards.forEach(card => {
+    card.classList.add('opponent');
+  });
+});
 
-	
-
-	
-
-
-		  
-
-		
-			
+</script>			
 </body>
 </html>
