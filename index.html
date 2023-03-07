@@ -68,7 +68,7 @@ discardButton.addEventListener('click', () => {
 restartButton.addEventListener('click', () => {
   cards.forEach(card => {
     card.style.backgroundImage = 'url(path/to/initial/image)';
-    card.classList.remove('selected');
+    card.classList.remove('selected','opponent','discarded');
   });
 });
 
