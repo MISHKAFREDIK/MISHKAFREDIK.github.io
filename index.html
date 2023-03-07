@@ -50,17 +50,6 @@ const discardButton = document.querySelector('#discard');
 const restartButton = document.querySelector('#restart');
 const opponentButton = document.querySelector('#opponent');
 
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    if (!card.classList.contains('opponent')) {
-      if (card.classList.contains('selected')) {
-        card.classList.remove('selected');
-      } else {
-        card.classList.add('selected');
-      }
-    }
-  });
-});
 
 cards.forEach(card => {
   card.addEventListener('click', () => {
