@@ -233,27 +233,31 @@ button:hover {
 
 @media only screen and (max-width: 600px) {
     .button {
-    display: flex;
-    margin: 0 auto;
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 300px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
     }
+
     button {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
     }
+
     .cards {
-    max-width: 400px;
-    margin: 20px auto;
-    justify-content: center;
+        max-width: 400px;
+        margin: 20px auto;
+        justify-content: center;
     }
+
     .card {
-    width: 70px;
-    height: 105px;
-    margin-right: 5px;
+        width: 70px;
+        height: 105px;
+        margin-right: 5px;
     }
-    }
+}
+
