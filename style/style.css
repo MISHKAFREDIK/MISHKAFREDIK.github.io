@@ -1,4 +1,5 @@
 body {
+    /* background-color: #1e1e1e; */
     background-color: #111111;
     /* background-color: #000000; */
     /* filter: invert(100) hue-rotate(180deg) */
@@ -11,7 +12,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* text-align: center; */
     gap: 10px;
 
 
@@ -25,10 +25,6 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* margin: auto; */
-    /* display: inline-block; */
-    /* margin-right: 10px; */
-
 }
 
 
@@ -79,13 +75,10 @@ button:hover {
 /* /////////////////////////////////////////////////////////////// */
 .che6 {
     background-image: url("/img/che6.png");
-    /* -webkit-filter: invert(100) hue-rotate(180deg);
-    filter: invert(100) hue-rotate(180deg); */
 }
 
 .che7 {
     background-image: url("/img/che7.png");
-    /* filter: invert(100) hue-rotate(180deg); */
 }
 
 .che8 {
@@ -232,8 +225,47 @@ button:hover {
 /* /////////////////////////////////////////////////////////////// */
 
 
+/* /////////////////////////////////////////////////////////////// */
+@media (max-width: 768px) {
+    .cards {
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
 
-@media only screen and (max-width: 600px) {
+        max-width: 400px;
+        /* margin: 0; */
+        justify-items: center ;
+        margin: 20px;
+
+
+        /* margin: 20px auto; */
+        /* justify-content: center; */
+    }
+    .card {
+        width: 70px;
+        height: 105px;
+        margin: 0;
+        background-position: right;                                                                                                                                                                                                                
+        /* margin-right: 5px; */
+    }
+
+    .che6, .che7, .che8, .che9, .che10, .che11, .che12, .che13, .che14 {
+        grid-column: 1;
+    }
+
+    .bub6, .bub7, .bub8, .bub9, .bub10, .bub11, .bub12, .bub13, .bub14 {
+        grid-column: 2;
+    }
+
+    .kre6, .kre7, .kre8, .kre9, .kre10, .kre11, .kre12, .kre13, .kre14 {
+        grid-column: 3;
+    }
+
+    .pik6, .pik7, .pik8, .pik9, .pik10, .pik11, .pik12, .pik13, .pik14 {
+        grid-column: 4;
+    }
+
     .button {
         display: flex;
         margin: 0 auto;
@@ -249,17 +281,6 @@ button:hover {
         max-width: 300px;
         margin-bottom: 10px;
     }
-
-    .cards {
-        max-width: 400px;
-        margin: 20px auto;
-        justify-content: center;
-    }
-
-    .card {
-        width: 70px;
-        height: 105px;
-        margin-right: 5px;
-    }
 }
+
 
