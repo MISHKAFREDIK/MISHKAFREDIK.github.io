@@ -1,19 +1,15 @@
 body {
-    /* background-color: #1e1e1e; */
     background-color: #111111;
-    /* background-color: #000000; */
-    /* filter: invert(100) hue-rotate(180deg) */
 }
 
 .cards {
-    max-width: 1100px;
+    max-width: 1050px;
     margin: 50px auto;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-
+    /* text-align: center; */
 
 }
 
@@ -25,8 +21,23 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    /* display: inline-block; */
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
+
+.container {
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+#opponent, #opponent1, #opponent2 {
+    display: none;
+}
 
 .button {
     display: flex;
@@ -50,9 +61,37 @@ button:hover {
     background-color: #0b3dfa;
 }
 
+/* Сховати радіо-кнопки */
+input[type="radio"] {
+    display: none;
+}
+
+/* Стилізація лейблів */
+label {
+    display: inline-block;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 80px;
+    min-height: 50px;
+    border-radius: 20px;
+    background-color: #052393;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+/* input[type="radio"]:checked+label {
+    background-color: #ffffff;
+    color: #000000;
+} */
 
 
 
+
+
+
+/* /////////////////////////// */
 .card.selected {
     border: 2px solid blue;
     opacity: 0.5;
@@ -63,9 +102,17 @@ button:hover {
     border: 2px solid red;
 }
 
-/* .card.mycard {
-    border: 1px solid white;
-} */
+.card.opponent1 {
+    border: 2px solid rgb(0, 255, 34);
+}
+
+.card.opponent2 {
+    border: 2px solid rgb(255, 0, 242);
+}
+
+.card.mycard {
+    border: 2px solid rgb(255, 238, 0);
+}
 
 .card.discarded {
     background-size: cover;
@@ -235,18 +282,19 @@ button:hover {
 
         max-width: 400px;
         /* margin: 0; */
-        justify-items: center ;
+        justify-items: center;
         margin: 20px;
 
 
         /* margin: 20px auto; */
         /* justify-content: center; */
     }
+
     .card {
         width: 70px;
         height: 105px;
         margin: 0;
-        background-position: right;                                                                                                                                                                                                                
+        background-position: right;
         /* margin-right: 5px; */
     }
 
@@ -281,6 +329,12 @@ button:hover {
         max-width: 300px;
         margin-bottom: 10px;
     }
+
+    label {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+
 }
-
-

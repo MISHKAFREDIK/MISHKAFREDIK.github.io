@@ -6,21 +6,22 @@
   <title>Дурак</title>
   <link rel="icon" href="/img/icon.png">
   <link rel="stylesheet" href="style/style.css">
+
 </head>
 
 <body>
 
   <section class="block">
     <div class="cards">
-      <div  class="card che6"></div>
-      <div  class="card che7"></div>
-      <div  class="card che8"></div>
-      <div  class="card che9"></div>
-      <div  class="card che10"></div>
-      <div  class="card che11"></div>
-      <div  class="card che12"></div>
-      <div  class="card che13"></div>
-      <div  class="card che14"></div>
+      <div class="card che6"></div>
+      <div class="card che7"></div>
+      <div class="card che8"></div>
+      <div class="card che9"></div>
+      <div class="card che10"></div>
+      <div class="card che11"></div>
+      <div class="card che12"></div>
+      <div class="card che13"></div>
+      <div class="card che14"></div>
 
       <div class="card bub6"></div>
       <div class="card bub7"></div>
@@ -31,7 +32,7 @@
       <div class="card bub12"></div>
       <div class="card bub13"></div>
       <div class="card bub14"></div>
-      
+
       <div class="card kre6"></div>
       <div class="card kre7"></div>
       <div class="card kre8"></div>
@@ -41,7 +42,7 @@
       <div class="card kre12"></div>
       <div class="card kre13"></div>
       <div class="card kre14"></div>
-      
+
       <div class="card pik6"></div>
       <div class="card pik7"></div>
       <div class="card pik8"></div>
@@ -51,24 +52,31 @@
       <div class="card pik12"></div>
       <div class="card pik13"></div>
       <div class="card pik14"></div>
-      
-
-
-      <!-- <div class="button">
-        <button id="discard">Відбій</button>
-        <button id="restart">Рестарт</button>
-        <button id="my-cards">Мої карти</button> 
-        <button id="opponent">Карти противника</button>
-      </div> -->
     </div>
-    <div class="button">
+    <div class="button container">
       <button id="discard">Відбій</button>
       <button id="restart">Рестарт</button>
-      <button id="my-cards">Мої карти</button> 
-      <button id="opponent">Карти противника</button>
-    </div>
-  </section>
+      <button id="my-cards">Мої карти</button>
 
+      <label for="opponent-count-1"><input type="radio" id="opponent-count-1" name="opponent-count" value="1">Один</label>
+      <label for="opponent-count-2"><input type="radio" id="opponent-count-2" name="opponent-count" value="2">Два</label>
+      <label for="opponent-count-3"><input type="radio" id="opponent-count-3" name="opponent-count" value="3">Три</label>
+
+      <button id="opponent">Карти противника 1</button>
+      <button id="opponent1">Карти противника 2</button>
+      <button id="opponent2">Карти противника 3</button>
+
+
+      <!-- <select id="opponent-select">
+        <option value="1">1 опонент</option>
+        <option value="2">2 опоненти</option>
+        <option value="3">3 опоненти</option>
+      </select>
+      <button id="opponent">Карти противника 1</button>
+      <button id="opponent1">Карти противника 2</button>
+      <button id="opponent2">Карти противника 3</button>
+    </div> -->
+  </section>
   <script src="js/script.js"></script>
 </body>
 
