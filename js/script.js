@@ -33,42 +33,6 @@ document.querySelectorAll('input[name="opponent-count"]').forEach(function (radi
     });
 });
 
-
-
-// ......................................
-// const opponentSelect = document.getElementById('opponent-select');
-// const opponent1 = document.getElementById('opponent');
-
-// set default value and show opponent 1 button
-// opponentSelect.value = '1';
-// opponent1.style.display = 'inline-block';
-
-// opponentSelect.addEventListener('change', function () {
-//     const numOpponents = parseInt(this.value);
-
-//     // hide all opponent buttons
-//     document.getElementById('opponent').style.display = 'none';
-//     document.getElementById('opponent1').style.display = 'none';
-//     document.getElementById('opponent2').style.display = 'none';
-
-//     // show opponent buttons based on number of opponents
-//     if (numOpponents >= 1) {
-//         document.getElementById('opponent').style.display = 'inline-block';
-//     }
-//     if (numOpponents >= 2) {
-//         document.getElementById('opponent1').style.display = 'inline-block';
-//     }
-//     if (numOpponents >= 3) {
-//         document.getElementById('opponent2').style.display = 'inline-block';
-//     }
-// });
-// ......................................
-
-
-
-
-
-
 const initialImages = [];
 
 cards.forEach(card => {
@@ -101,16 +65,10 @@ discardButton.addEventListener('click', () => {
 restartButton.addEventListener('click', () => {
     cards.forEach((card, index) => {
         card.style.backgroundImage = initialImages[index];
-        card.classList.remove('selected', 'opponent', 'opponent1', 'opponent2', 'discarded','mycard');
-
+        card.classList.remove('selected', 'opponent', 'opponent1', 'opponent2', 'discarded', 'mycard');
         opponent.style.display = 'none';
         opponent1.style.display = 'none';
         opponent2.style.display = 'none';
-        // opponentSelect.value = '1';
-        // // document.getElementById('opponent').style.display = 'none';
-        // document.getElementById('opponent1').style.display = 'none';
-        // document.getElementById('opponent2').style.display = 'none';
-
     });
 });
 

@@ -32,6 +32,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: center;
+    /* margin-top: 50px; */
+    gap: 50px;
 }
 
 
@@ -42,7 +45,7 @@ body {
 .button {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     gap: 50px;
 }
 
@@ -50,6 +53,7 @@ button {
     width: 100%;
     max-width: 200px;
     min-height: 50px;
+    border: 1px solid black;
     border-radius: 20px;
     color: aliceblue;
     font-size: medium;
@@ -61,12 +65,10 @@ button:hover {
     background-color: #0b3dfa;
 }
 
-/* Сховати радіо-кнопки */
 input[type="radio"] {
     display: none;
 }
 
-/* Стилізація лейблів */
 label {
     display: inline-block;
     border: 1px solid black;
@@ -77,8 +79,14 @@ label {
     background-color: #052393;
     cursor: pointer;
     text-align: center;
+    font-size: medium;
+    font-weight: bold;
     line-height: 50px;
-    color: #ffffff;
+    color: aliceblue;
+}
+
+label:hover {
+    background-color: #0b3dfa;
 }
 
 /* input[type="radio"]:checked+label {
@@ -331,10 +339,13 @@ label {
     }
 
     label {
-        width: 100%;
+        display: none;
+        /* width: 100%;
         max-width: 300px;
-        margin-bottom: 10px;
+        margin-bottom: 10px; */
     }
 
-
+    #opponent, #opponent1, #opponent2 {
+        display: inline-block;
+    }
 }
