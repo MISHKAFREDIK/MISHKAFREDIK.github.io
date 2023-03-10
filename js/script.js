@@ -75,7 +75,7 @@ restartButton.addEventListener('click', () => {
 opponentButton.addEventListener('click', () => {
     const selectedCards = document.querySelectorAll('.card.selected');
     selectedCards.forEach(card => {
-        card.classList.remove('selected', 'opponent1', 'opponent2');
+        card.classList.remove('selected', 'opponent1', 'opponent2','mycard');
         card.classList.add('opponent');
     });
 });
@@ -83,7 +83,7 @@ opponentButton.addEventListener('click', () => {
 opponentButton1.addEventListener('click', () => {
     const selectedCards = document.querySelectorAll('.card.selected');
     selectedCards.forEach(card => {
-        card.classList.remove('selected', 'opponent', 'opponent2');
+        card.classList.remove('selected', 'opponent', 'opponent2','mycard');
         card.classList.add('opponent1');
     });
 });
@@ -91,7 +91,7 @@ opponentButton1.addEventListener('click', () => {
 opponentButton2.addEventListener('click', () => {
     const selectedCards = document.querySelectorAll('.card.selected');
     selectedCards.forEach(card => {
-        card.classList.remove('selected', 'opponent', 'opponent1');
+        card.classList.remove('selected', 'opponent', 'opponent1','mycard');
         card.classList.add('opponent2');
     });
 });
